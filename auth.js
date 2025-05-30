@@ -1,9 +1,9 @@
-// // Mock users database (faqat test uchun, backendda ishlatilmaydi)
-// const mockUsers = [
-//   { id: 1, email: "admin@dernsupport.uz", password: "admin123", role: "admin", firstName: "Admin", lastName: "User" },
-//   { id: 2, email: "master@dernsupport.uz", password: "master123", role: "master", firstName: "Master", lastName: "Technician" },
-//   { id: 3, email: "user@dernsupport.uz", password: "user123", role: "user", firstName: "Test", lastName: "User" },
-// ];
+// Mock users database (faqat test uchun, backendda ishlatilmaydi)
+const mockUsers = [
+  { id: 1, email: "admin@dernsupport.uz", password: "admin123", role: "admin", firstName: "Admin", lastName: "User" },
+  { id: 2, email: "master@dernsupport.uz", password: "master123", role: "master", firstName: "Master", lastName: "Technician" },
+  { id: 3, email: "user@dernsupport.uz", password: "user123", role: "user", firstName: "Test", lastName: "User" },
+];
 
 // Get registered users from localStorage
 function getRegisteredUsers() {
@@ -208,12 +208,12 @@ window.logout = () => {
   window.API.Auth.logout();
 };
 
-// window.checkAuth = () => {
-//   const user = localStorage.getItem("currentUser");
-//   const token = localStorage.getItem("authToken");
-//   if (!user || !token) {
-//     window.location.href = "dashboard.html";
-//     return null;
-//   }
-//   return JSON.parse(user);
-// };
+window.checkAuth = () => {
+  const user = localStorage.getItem("currentUser");
+  const token = localStorage.getItem("authToken");
+  if (!user || !token) {
+    window.location.href = "dashboard.html";
+    return null;
+  }
+  return JSON.parse(user);
+};
