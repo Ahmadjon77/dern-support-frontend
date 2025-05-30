@@ -16,10 +16,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 });
 
-
-
-
-
 // Master qo‘shish modalini ochish
 function showAddMasterModal() {
     const modal = document.getElementById('addMasterModal');

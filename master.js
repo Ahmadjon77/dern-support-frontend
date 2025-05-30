@@ -392,4 +392,26 @@ function viewOrderDetails(orderId) {
     }
 }
 
+// Complete order
+function completeOrder(orderId) {
+    if (confirm('Bu buyurtmani tugallangan deb belgilashni xohlaysizmi?')) {
+        const orders = JSON.parse(localStorage.getItem('userOrders') || '[]');
+        const orderIndex = orders.findIndex(o => o.id === orderId);
+
+        if (orderIndex !== -1) {
+            orders[orderIndex].status = 'completed';
+            orders[orderIndex].completedAt = new Date().toISOString();
+            orders[orderIndex].updatedAt = new Date().toISOString();
+
+            localStorage.setItem('userOrders', JSON.stringify(orders));
+            loadMasterDashboard();
+            showMasterTab('my-orders');
+
+            alert('Buyurtma muvaffaqiyatli tugallandi!');
+        } else {
+            alert('Buyurtma topilmadi!');
+        }
+    }
+}
+
 console.log("🔧 Master panel loaded!");

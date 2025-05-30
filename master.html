@@ -129,6 +129,19 @@
                         </div>
                     </div>
                     
+                    <div class="order-rating">
+                      <label for="rating-${order.id}">Reyting:</label>
+                      <select id="rating-${order.id}" onchange="saveRating('${order.id}', this.value)">
+                        <option value="">Tanlang</option>
+                        <option value="5">5 - Zo‘r</option>
+                        <option value="4">4 - Yaxshi</option>
+                        <option value="3">3 - O‘rtacha</option>
+                        <option value="2">2 - Yomon</option>
+                        <option value="1">1 - Juda yomon</option>
+                      </select>
+                    </div>
+
+
                     <!-- Profile Tab -->
                     <div id="profile-master-tab" class="tab-content">
                         <div class="card">
