@@ -4,17 +4,17 @@ let allUsers = [];
 let allProducts = [];
 let allMasters = [];
 
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    await requireAdmin();
-    currentAdmin = await API.Auth.getCurrentUser();
-    document.getElementById("adminName").textContent = `${currentAdmin.firstName} ${currentAdmin.lastName}`;
-    await loadAdminDashboard();
-  } catch (error) {
-    console.error("Admin panel load error:", error);
-    window.location.href = "login.html";
-  }
-});
+// document.addEventListener("DOMContentLoaded", async () => {
+//   try {
+//     await requireAdmin();
+//     currentAdmin = await API.Auth.getCurrentUser();
+//     document.getElementById("adminName").textContent = `${currentAdmin.firstName} ${currentAdmin.lastName}`;
+//     await loadAdminDashboard();
+//   } catch (error) {
+//     console.error("Admin panel load error:", error);
+//     window.location.href = "login.html";
+//   }
+// });
 
 
 

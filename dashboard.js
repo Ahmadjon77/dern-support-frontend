@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", async () => {
     console.log("dashboard.js loaded, API:", window.API);
 
-    // Foydalanuvchi ma'lumotlarini tekshirish
-    const user = checkAuth();
-    if (!user) return;
+    // // Foydalanuvchi ma'lumotlarini tekshirish
+    // const user = checkAuth();
+    // if (!user) return;
 
-    // Foydalanuvchi ismini ko'rsatish
-    const userNameElements = document.querySelectorAll("#userName, #user-name");
-    userNameElements.forEach((element) => {
-        element.textContent = user.firstName || "Foydalanuvchi";
-    });
+    // // Foydalanuvchi ismini ko'rsatish
+    // const userNameElements = document.querySelectorAll("#userName, #user-name");
+    // userNameElements.forEach((element) => {
+    //     element.textContent = user.firstName || "Foydalanuvchi";
+    // });
 
     // Buyurtmalarni yuklash
     await loadOrders();
